@@ -1,0 +1,63 @@
+# Portfolio-specific: Exclude technical implementation files
+
+# Source code (not needed for portfolio)
+src/
+*.py
+
+# Technical files
+requirements.txt
+Makefile
+setup.py
+pyproject.toml
+
+# Sample projects with code
+projects/sample_project/
+
+# Documentation setup files (one-time use)
+GITHUB_*.md
+FIRST_*.md
+PUSH_*.md
+HOW_*.md
+PORTFOLIO_*.md
+FILES_*.md
+UPLOAD_*.md
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Generated outputs
+projects/*/out/
+*.jpg
+*.jpeg
+*.png
+
+# Logs
+*.log
+
+# Environment variables and secrets
+.env
+.env.*
+*.key
+*.pem
+secrets/
+credentials/
+
+# Old technical documentation (if exists)
+docs/
+
+# Old project files (if exists)
+CHANGELOG.md
+CONTRIBUTING.md
+CODE_OF_CONDUCT.md
+SECURITY.md

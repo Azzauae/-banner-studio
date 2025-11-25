@@ -1,0 +1,17 @@
+# Default owner for all files
+* @Azzauae
+
+# Core application code
+/src/ @Azzauae
+*.py @Azzauae
+
+# Documentation
+/docs/ @Azzauae
+*.md @Azzauae
+
+# Configuration files
+.github/ @Azzauae
+Makefile @Azzauae
+requirements.txt @Azzauae
+
+
