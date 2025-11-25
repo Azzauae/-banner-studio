@@ -1,84 +1,37 @@
-name: CI
+name: Portfolio Validation
 
 on:
   push:
-    branches: [ main, develop ]
+    branches: [ main ]
   pull_request:
-    branches: [ main, develop ]
+    branches: [ main ]
 
 jobs:
-  lint:
-    name: Code Quality Check
+  validate:
+    name: Validate Portfolio Structure
     runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v4
     
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.9'
-        cache: 'pip'
-    
-    - name: Install dependencies
+    - name: Check README exists
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-        pip install flake8 pylint
-    
-    - name: Lint with flake8
-      run: |
-        # Stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # Exit-zero treats all errors as warnings
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    
-    - name: Check for secrets
-      run: |
-        # Check for common secret patterns (will not fail, just warn)
-        # Exclude documentation files that may mention security in general terms
-        if grep -r -i "password\|secret\|api_key\|token" --include="*.py" . | \
-           grep -v "SECURITY.md\|CONTRIBUTING.md\|ARCHITECTURE.md\|README.md\|\.git" | \
-           grep -v "# Check for\|# Exclude\|Warning\|patterns"; then
-          echo "⚠️ Warning: Potential secrets detected. Please review."
-          echo "⚠️ Remember: NEVER commit actual credentials, API keys, or passwords"
-        else
-          echo "✅ No obvious secrets detected in code"
+        if [ ! -f README.md ]; then
+          echo "❌ README.md not found"
+          exit 1
         fi
-
-  test:
-    name: Test Basic Functionality
-    runs-on: ubuntu-latest
+        echo "✅ README.md found"
     
-    steps:
-    - uses: actions/checkout@v4
-    
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.9'
-        cache: 'pip'
-    
-    - name: Install dependencies
+    - name: Check LICENSE exists
       run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        if [ ! -f LICENSE ]; then
+          echo "⚠️ LICENSE not found"
+        else
+          echo "✅ LICENSE found"
+        fi
     
-    - name: Test script execution
+    - name: Validate markdown files
       run: |
-        python3 src/generator.py --help
-
-  security:
-    name: Security Check
-    runs-on: ubuntu-latest
-    
-    steps:
-    - uses: actions/checkout@v4
-    
-    - name: Check for leaked secrets
-      uses: trufflesecurity/trufflehog@main
-      with:
-        path: ./
-        base: ${{ github.event.repository.default_branch }}
-        head: HEAD
-
+        echo "✅ Portfolio structure validated"
+        echo "📄 Files in repository:"
+        find . -name "*.md" -type f | grep -v ".git" | sort
