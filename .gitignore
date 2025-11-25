@@ -21,6 +21,10 @@ HOW_*.md
 PORTFOLIO_*.md
 FILES_*.md
 UPLOAD_*.md
+FINAL_*.md
+GIT_COMMANDS.sh
+RESUME.md
+РЕЗЮМЕ.md
 
 # Virtual Environment
 .venv/
