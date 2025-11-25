@@ -1,240 +1,203 @@
-# 👋 Product Manager Portfolio | Resume
+# 🎨 Banner Studio
 
-> **Strategic Product Leader | User-Centric Problem Solver | Data-Driven Decision Maker**
+**Product Case Study: Marketing Automation Platform**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/yourprofile)
+> A production-grade solution that automates banner generation for social media marketing teams, reducing manual work by 95% and enabling faster campaign launches.
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-View-black)](https://github.com/Azzauae)
 [![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:azzauae27@gmail.com)
-[![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black)](https://github.com/Azzauae)
-[![Resume](https://img.shields.io/badge/Resume-PDF-blue)](./RESUME.md)
 
-> **📄 This is my professional portfolio and resume as a Product Manager.**
-> 
-> **Quick links:**
-> - [📄 Detailed Resume](./RESUME.md) - Traditional resume format
-> - [🚀 Featured Project](./projects/banner-studio/README.md) - Banner Studio case study
+> **💼 This is a product case study. View my full Product Manager portfolio → [github.com/Azzauae](https://github.com/Azzauae)**
 
 ---
 
-## 🎯 About Me
+## 🎯 Executive Summary
 
-Experienced Product Manager with a proven track record of building products that solve real user problems and deliver measurable business impact. I combine strategic thinking with technical understanding to bridge the gap between business goals and user needs.
+**Problem**: Marketing teams were spending 12-16 hours manually creating banners for social media campaigns, leading to delayed launches and inconsistent quality.
 
-**My Philosophy**: Great products solve real problems. Great Product Managers understand those problems deeply—not just the symptoms, but the root causes. Then we design solutions that are not just functional, but delightful.
+**Solution**: Designed and led development of an intelligent batch-processing system that automates banner generation across multiple platforms (VK, Telegram, Instagram Stories) with intelligent typography and brand consistency.
 
----
-
-## 💡 Core Competencies
-
-### Product Strategy & Vision
-- Roadmap planning with clear prioritization frameworks
-- Balancing business objectives with user needs
-- Strategic thinking with long-term vision
-
-### User-Centric Design
-- Deep user research and persona development
-- UX design thinking and usability principles
-- User journey mapping and optimization
-
-### Data-Driven Decisions
-- Metrics-based product development
-- A/B testing and experimentation
-- Quantitative analysis balanced with qualitative insights
-
-### Technical Understanding
-- System architecture comprehension
-- API design and integration principles
-- Development process and technical constraints awareness
-
-### Cross-Functional Leadership
-- Stakeholder management and alignment
-- Agile/Scrum methodologies
-- Team collaboration and communication
-
----
-
-## 🚀 Featured Project
-
-### [Banner Studio: Marketing Automation Platform](./projects/banner-studio/README.md)
-
-**The Challenge**: Marketing teams spent 12-16 hours manually creating banners for social media campaigns, leading to delayed launches, inconsistent quality, and team frustration.
-
-**My Approach**: 
-- Conducted user research to understand workflow pain points
-- Designed batch-processing solution with intelligent automation
-- Led development focusing on fault tolerance and user experience
-- Iterated based on real-world usage and feedback
-
-**The Solution**: Intelligent banner generation system that automates the entire workflow—from image processing to multi-platform export—with smart defaults and graceful error handling.
-
-**Business Impact**:
+**Impact**: 
 - ⏱️ **95% time reduction** (16 hours → 5 minutes for 50 banners)
-- 📈 **10x scalability** - handles campaigns of any size without linear time increase
-- ✅ **100% quality consistency** - eliminates human error in typography and positioning
-- 🚀 **Faster time-to-market** - campaigns launch days earlier
-
-[View Full Case Study →](./projects/banner-studio/CASE_STUDY.md) | [Architecture Decisions →](./projects/banner-studio/ARCHITECTURE_DECISIONS.md)
+- 📈 **Scalable to any campaign size** without linear time increase
+- ✅ **Consistent brand quality** across all outputs
+- 🚀 **Faster campaign launches** enabling more agile marketing
 
 ---
 
-## 📊 Key Achievements & Metrics
+## 📊 Business Problem
 
-### Time Optimization
-- **95% reduction** in manual work through intelligent automation
-- **Scalable solutions** that handle growth without proportional resource increase
-- **Faster iteration cycles** through process optimization
+### Context
+Marketing teams creating social media campaigns faced significant operational bottlenecks:
 
-### User Experience
-- **Zero onboarding time** for technical users through intuitive design
-- **Reduced support burden** through fault-tolerant systems
-- **High user satisfaction** through focus on usability
+1. **Scale Inefficiency**: Each banner required 15-20 minutes of manual design work
+   - Multiple platforms = multiple sizes (VK square, VK horizontal, Stories, Telegram)
+   - 50-image campaign = 12.5-16.5 hours of work
+
+2. **Quality Inconsistency**: Manual work led to variations in:
+   - Typography and spacing
+   - Text positioning
+   - Brand compliance
+
+3. **Operational Friction**: 
+   - Encoding issues with text files causing delays
+   - Hard to maintain consistency across team members
+   - Difficult to scale for larger campaigns
+
+### Business Impact of the Problem
+- **Delayed campaign launches** - teams couldn't keep up with demand
+- **Limited scalability** - campaigns were constrained by manual capacity
+- **Quality control overhead** - required extensive review cycles
+- **Team frustration** - repetitive, low-value work
+
+---
+
+## 💡 Solution Approach
+
+### Product Strategy
+
+**Phase 1: Research & Discovery**
+- Interviewed marketing team members to understand workflow
+- Identified pain points: encoding issues, file naming, batch processing needs
+- Analyzed existing tools and their limitations
+
+**Phase 2: Solution Design**
+- Designed batch-processing workflow with intelligent defaults
+- Created flexible configuration system for per-image customization
+- Built fault-tolerant system with graceful error handling
+
+**Phase 3: Implementation & Iteration**
+- Developed MVP focusing on core use case (VK/Telegram banners)
+- Tested with marketing team, iterated based on feedback
+- Added features: clean mode for A/B testing, CTA-only mode
+
+### Key Design Decisions
+
+1. **Configuration over Code**
+   - Decision: Text-based configuration files instead of hardcoded values
+   - Rationale: Non-technical users (marketers) need to customize content
+   - Impact: Enables content changes without code deployments
+
+2. **Fault Tolerance First**
+   - Decision: Multiple encoding detection strategies, fuzzy file matching
+   - Rationale: Production deadlines are non-negotiable
+   - Impact: System never fails silently; always produces output
+
+3. **Smart Defaults**
+   - Decision: Intelligent fallbacks ensure production never stops
+   - Rationale: Better to output something than nothing
+   - Impact: Reduced support burden, improved user confidence
+
+4. **Platform-Optimized Presets**
+   - Decision: Pre-configured sizes for major platforms
+   - Rationale: Users shouldn't need to know platform specifications
+   - Impact: One command generates all required formats
+
+---
+
+## 📈 Results & Metrics
+
+### Time Savings
+| Metric | Before | After | Improvement |
+|--------|--------|-------|-------------|
+| Time per banner | 15-20 min | < 1 min | 95% reduction |
+| Campaign (50 banners) | 12.5-16.5 hours | < 5 minutes | 99%+ reduction |
+| Scalability | Linear (50 banners = 16h, 100 = 32h) | Constant (any size = < 5 min) | Exponential |
+
+### Quality Improvements
+- ✅ **100% brand consistency** - all outputs follow same typography rules
+- ✅ **Zero encoding errors** - automatic detection and correction
+- ✅ **Reduced review cycles** - consistent quality eliminates need for extensive QA
 
 ### Business Impact
-- **Direct ROI contribution** through operational efficiency
-- **Faster campaign launches** enabling more agile marketing
-- **Cost reduction** through automation of repetitive tasks
+- **Faster time-to-market**: Campaigns launch days earlier
+- **Increased campaign volume**: Team can handle 10x more campaigns
+- **Cost reduction**: Less designer time = lower operational costs
+- **Team satisfaction**: Eliminates repetitive, low-value work
 
 ---
 
-## 🏗️ My Product Approach
+## 🏗️ Technical Architecture (PM Perspective)
 
-### 1. Problem-First Thinking
-Always start with the problem, not the solution. I believe in understanding user pain points deeply—not just what they say they need, but why they need it.
+### System Design Principles
 
-**Example**: Banner Studio started not with "let's build a banner generator," but with understanding the frustration of spending 16 hours on repetitive manual work.
+1. **User Experience First**
+   - Simple CLI interface accessible to non-technical users
+   - Intelligent defaults reduce configuration overhead
+   - Clear error messages guide users to resolution
 
-### 2. Data-Informed Decisions
-Metrics and user feedback guide every decision. I balance quantitative data (time saved, error rates, adoption) with qualitative insights (user interviews, feedback).
+2. **Fault Tolerance**
+   - Multiple encoding detection strategies
+   - Fuzzy file matching handles naming inconsistencies
+   - Fallback mechanisms ensure production continuity
 
-**Tools**: Analytics, user interviews, A/B testing, usage patterns
+3. **Maintainability**
+   - Configuration-driven customization (no code changes needed)
+   - Single-file architecture for easy deployment
+   - Comprehensive documentation for future contributors
 
-### 3. Strategic Prioritization
-Every feature is evaluated through the lens of:
-- **Business Impact**: Does it drive key metrics?
-- **User Value**: Does it solve a real problem?
-- **Technical Feasibility**: Can we build it well and maintain it?
-- **Strategic Alignment**: Does it move us toward our vision?
+4. **Performance**
+   - Efficient image processing optimized for batch operations
+   - Minimal dependencies for fast installation
+   - 100% local processing (no external API calls)
 
-### 4. Execution Excellence
-Building products is about more than ideas—it's about shipping value. I focus on:
-- Iterative delivery with quick feedback loops
-- Clear documentation and communication
-- Measurable outcomes, not just outputs
+### Key Technical Trade-offs
 
----
+**Single-file vs. Modular Architecture**
+- Chosen: Single-file for main generator
+- Rationale: Simpler deployment, easier to understand
+- Trade-off: File size grows, but manageable for current scope
 
-## 🛠️ Skills & Tools
+**CLI vs. Web Interface**
+- Chosen: CLI-first with potential for web interface
+- Rationale: CLI is faster for batch operations, scriptable
+- Trade-off: Less accessible to non-technical users, mitigated by documentation
 
-### Product Management
-- ✅ Roadmapping & Strategy
-- ✅ User Research & Personas
-- ✅ MVP Definition & Prioritization
-- ✅ A/B Testing & Analytics
-- ✅ Stakeholder Management
-- ✅ Agile/Scrum Methodologies
+**Local Processing vs. Cloud Service**
+- Chosen: 100% local processing
+- Rationale: No API costs, no rate limits, privacy, works offline
+- Trade-off: Requires Python installation (acceptable for target users)
 
-### Technical Understanding
-- ✅ System Architecture (design decisions, trade-offs)
-- ✅ API Design Principles
-- ✅ CI/CD & DevOps Basics
-- ✅ Security Best Practices
-- ✅ Technical Documentation
-
-### Tools & Platforms
-- **Analytics**: Google Analytics, Amplitude, Custom dashboards
-- **Project Management**: Jira, Linear, Taiga, GitHub Projects, Notion
-- **Design**: Figma (basic), Design thinking principles
-- **Documentation**: Markdown, Confluence, Technical writing
-- **Development**: Git, GitHub, Basic scripting
+[See detailed architecture decisions →](./ARCHITECTURE_DECISIONS.md)
 
 ---
 
-## 📚 Case Studies & Documentation
+## 🎓 Learnings & Insights
 
-### [Banner Studio: Complete Case Study](./projects/banner-studio/CASE_STUDY.md)
-Full narrative of problem discovery, solution design, implementation, and results.
+### Product Management Insights
 
-### [Architecture Decisions](./projects/banner-studio/ARCHITECTURE_DECISIONS.md)
-How technical decisions were made with product thinking, including trade-offs and rationale.
+1. **Start with the Problem**: Deep understanding of user pain points led to right solution
+2. **Smart Defaults Matter**: Good defaults eliminate 80% of configuration needs
+3. **Fault Tolerance is a Feature**: Systems that never fail silently build user trust
+4. **Documentation is Product**: Comprehensive docs reduce support burden significantly
 
-### [Metrics & ROI Analysis](./projects/banner-studio/METRICS.md)
-Detailed business impact metrics and return on investment calculations.
+### Technical Insights
 
----
+1. **Configuration over Code**: Enables non-technical users to customize without deployments
+2. **Graceful Degradation**: Better to output something than nothing
+3. **Single Responsibility**: Each component has clear, focused purpose
 
-## 💼 Experience Highlights
+### Process Insights
 
-### Product Leadership
-- Led product development from concept to production
-- Balanced technical constraints with user needs
-- Delivered solutions with measurable business impact
-
-### Problem-Solving
-- Identified operational inefficiencies and automated solutions
-- Reduced manual work by 95% through intelligent automation
-- Designed systems with fault tolerance and graceful degradation
-
-### Technical Communication
-- Translated technical concepts for non-technical stakeholders
-- Documented architectural decisions and trade-offs
-- Created comprehensive documentation for user success
-
-### User Focus
-- Conducted user research to understand pain points
-- Designed solutions with usability as priority
-- Iterated based on real-world feedback
+1. **Iterative Development**: Started with MVP, added features based on feedback
+2. **User Testing**: Real-world usage revealed edge cases (encoding, file naming)
+3. **Documentation First**: Writing docs clarified requirements and edge cases
 
 ---
 
-## 🎓 Principles I Live By
+## 📚 Case Study
 
-1. **User-First**: Always start with the user's problem
-2. **Data-Driven**: Let metrics guide decisions, but validate with user insights
-3. **Strategic**: Understand trade-offs and make informed choices
-4. **Pragmatic**: Perfect is the enemy of done—ship, learn, iterate
-5. **Collaborative**: Great products come from great teams
+[Read full case study with detailed problem analysis, solution design, and implementation approach →](./CASE_STUDY.md)
 
 ---
 
-## 📈 What I Bring to Your Team
+## 🔗 Related Documents
 
-- **Strategic Thinking**: Ability to see the big picture while executing on details
-- **Technical Depth**: Understand what's possible, what's hard, and what's worth it
-- **User Empathy**: Deep understanding of user needs and pain points
-- **Business Acumen**: Focus on metrics that matter and ROI
-- **Execution**: Proven track record of shipping products that deliver value
-- **Communication**: Clear documentation, effective stakeholder management
+- [Architecture Decisions](./ARCHITECTURE_DECISIONS.md) - Technical decisions and trade-offs
+- [Metrics & ROI](./METRICS.md) - Detailed business impact analysis
+- [Case Study](./CASE_STUDY.md) - Complete product development narrative
 
 ---
 
-## 📫 Let's Connect
+**Status**: ✅ Production-ready | **Impact**: 95% time reduction | **Users**: Marketing teams
 
-I'm always open to discussing product challenges, sharing insights, or exploring new opportunities.
-
-- **📧 Email**: azzauae27@gmail.com
-- **💼 LinkedIn**: [Connect with me](https://linkedin.com/in/yourprofile)
-- **💻 GitHub**: [@Azzauae](https://github.com/Azzauae)
-
----
-
-## 🌟 What's Next?
-
-I'm continuously learning and growing as a Product Manager. Currently focused on:
-- Advanced analytics and experimentation methodologies
-- Product-led growth strategies
-- Building products at scale
-
-**Open to opportunities** where I can leverage my technical background and user-centric approach to build products that make a real difference.
-
----
-
-<div align="center">
-
-*"The best products don't just solve problems—they make users' lives measurably better."*
-
-**Let's build something great together.**
-
-</div>
-
----
-
-*Last updated: January 2025*
