@@ -1,10 +1,17 @@
-# 👋 Product Manager Portfolio
+# 👋 Product Manager Portfolio | Resume
 
 > **Strategic Product Leader | User-Centric Problem Solver | Data-Driven Decision Maker**
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/yourprofile)
 [![Email](https://img.shields.io/badge/Email-Contact-red)](mailto:azzauae27@gmail.com)
 [![GitHub](https://img.shields.io/badge/GitHub-Portfolio-black)](https://github.com/Azzauae)
+[![Resume](https://img.shields.io/badge/Resume-PDF-blue)](./RESUME.md)
+
+> **📄 This is my professional portfolio and resume as a Product Manager.**
+> 
+> **Quick links:**
+> - [📄 Detailed Resume](./RESUME.md) - Traditional resume format
+> - [🚀 Featured Project](./projects/banner-studio/README.md) - Banner Studio case study
 
 ---
 
